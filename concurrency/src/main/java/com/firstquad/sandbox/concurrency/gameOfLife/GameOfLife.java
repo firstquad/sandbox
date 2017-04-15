@@ -1,4 +1,4 @@
-package com.firstquad.sandbox.concurrency;
+package com.firstquad.sandbox.concurrency.gameOfLife;
 
 /**
  * Created by dmitriy on 04.04.17.
@@ -6,9 +6,16 @@ package com.firstquad.sandbox.concurrency;
 public class GameOfLife {
 
     public static void main(String[] args) {
+        long t0 = System.currentTimeMillis();
         Thread thread = new Thread(new World());
         thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
+        System.out.println("Time elapsed: " + (System.currentTimeMillis() - t0));
     }
 
     private static class World implements Runnable {
@@ -26,24 +33,23 @@ public class GameOfLife {
             cells[6][6].makeAlive();
 
 
-            for (int n = 0; n < 10; n++) {
+            for (int n = 0; n < 100; n++) {
                 for (int i = 0; i < cells.length; i++) {
                     for (int j = 0; j < cells.length; j++) {
                         System.out.print(cells[j][i].isAlive ? "* " : "' ");
-//                        System.out.print(cells[i][j].isAlive ? "* " : i +"" + j);
                     }
                     System.out.println();
                 }
                 System.out.println("\n\n");
 
 
-                synchronized (this) {
-                    try {
-                        this.wait(800);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
+//                synchronized (this) {
+//                    try {
+//                        this.wait(800);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
 
                 countAliveNeighbour(cells);
 
@@ -94,29 +100,29 @@ public class GameOfLife {
             int maxIndex = cells.length - 1;
             for (int i = 0; i <= maxIndex; i++) {
                 for (int j = 0; j <= maxIndex; j++) {
-                    int countAliveNeighbour = 0;
+                    int count = 0;
                     if (i != 0) {
-                        countAliveNeighbour = addAliveNeighbour(cells[i - 1][j], countAliveNeighbour);
+                        count = addAliveNeighbour(cells[i - 1][j], count);
                         if (j != 0)
-                            countAliveNeighbour = addAliveNeighbour(cells[i - 1][j - 1], countAliveNeighbour);
+                            count = addAliveNeighbour(cells[i - 1][j - 1], count);
                         if (j < maxIndex)
-                            countAliveNeighbour = addAliveNeighbour(cells[i - 1][j + 1], countAliveNeighbour);
+                            count = addAliveNeighbour(cells[i - 1][j + 1], count);
                     }
                     if (i < maxIndex) {
-                        countAliveNeighbour = addAliveNeighbour(cells[i + 1][j], countAliveNeighbour);
+                        count = addAliveNeighbour(cells[i + 1][j], count);
                         if (j != 0) {
-                            countAliveNeighbour = addAliveNeighbour(cells[i + 1][j - 1], countAliveNeighbour);
+                            count = addAliveNeighbour(cells[i + 1][j - 1], count);
                         }
                         if (j < maxIndex) {
-                            countAliveNeighbour = addAliveNeighbour(cells[i + 1][j + 1], countAliveNeighbour);
+                            count = addAliveNeighbour(cells[i + 1][j + 1], count);
                         }
 
                     }
                     if (j != 0)
-                        countAliveNeighbour = addAliveNeighbour(cells[i][j - 1], countAliveNeighbour);
+                        count = addAliveNeighbour(cells[i][j - 1], count);
                     if (j < maxIndex)
-                        countAliveNeighbour = addAliveNeighbour(cells[i][j + 1], countAliveNeighbour);
-                    cells[i][j].setCountAliveNeighbour(countAliveNeighbour);
+                        count = addAliveNeighbour(cells[i][j + 1], count);
+                    cells[i][j].setCountAliveNeighbour(count);
                 }
             }
         }
