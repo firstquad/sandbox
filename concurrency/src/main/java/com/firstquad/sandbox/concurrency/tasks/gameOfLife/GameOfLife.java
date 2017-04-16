@@ -1,4 +1,4 @@
-package com.firstquad.sandbox.concurrency.gameOfLife;
+package com.firstquad.sandbox.concurrency.tasks.gameOfLife;
 
 /**
  * Created by dmitriy on 04.04.17.

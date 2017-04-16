@@ -1,4 +1,4 @@
-package com.firstquad.sandbox.concurrency.ticktock;
+package com.firstquad.sandbox.concurrency.tasks.ticktock;
 
 /**
  * Created by dmitriy on 05.04.17.
