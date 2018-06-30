@@ -1,3 +1,6 @@
 rootProject.name = 'sandbox'
 include 'concurrency'
+include 'frontend'
+include 'akka-sample'
+include 'tasks'
 
