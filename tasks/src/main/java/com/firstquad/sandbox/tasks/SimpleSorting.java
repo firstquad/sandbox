@@ -48,11 +48,11 @@ public class SimpleSorting {
     }
 
     public static int[] bubbleSort(int[] in) {
-        for (int i = 0; i < in.length; i++) {
-            for (int j = 0; j < in.length; j++) {
-                if (in[j] > in[i]) {
-                    int tmp = in[i];
-                    in[i] = in[j];
+        for (int i = 0; i < in.length - 1; i++) {
+            for (int j = 0; j < in.length - i - 1; j++) {
+                if (in[j] > in[j+1]) {
+                    int tmp = in[j+1];
+                    in[j+1] = in[j];
                     in[j] = tmp;
                 }
             }
