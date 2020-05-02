@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akka-sample/akka-sample.iml" filepath="$PROJECT_DIR$/.idea/modules/akka-sample/akka-sample.iml" group="akka-sample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akka-sample/akka-sample_main.iml" filepath="$PROJECT_DIR$/.idea/modules/akka-sample/akka-sample_main.iml" group="akka-sample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akka-sample/akka-sample_test.iml" filepath="$PROJECT_DIR$/.idea/modules/akka-sample/akka-sample_test.iml" group="akka-sample" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/concurrency/concurrency.iml" filepath="$PROJECT_DIR$/.idea/modules/concurrency/concurrency.iml" group="concurrency" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/concurrency/concurrency_main.iml" filepath="$PROJECT_DIR$/.idea/modules/concurrency/concurrency_main.iml" group="concurrency" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/concurrency/concurrency_test.iml" filepath="$PROJECT_DIR$/.idea/modules/concurrency/concurrency_test.iml" group="concurrency" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend/frontend.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend/frontend.iml" group="frontend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend/frontend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend/frontend_main.iml" group="frontend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/frontend/frontend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/frontend/frontend_test.iml" group="frontend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx-java/rx-java.iml" filepath="$PROJECT_DIR$/.idea/modules/rx-java/rx-java.iml" group="rx-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx-java/rx-java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/rx-java/rx-java_main.iml" group="rx-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rx-java/rx-java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/rx-java/rx-java_test.iml" group="rx-java" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox_main.iml" group="sandbox" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox_test.iml" group="sandbox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-sample/spark-sample.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-sample/spark-sample.iml" group="spark-sample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-sample/spark-sample_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-sample/spark-sample_main.iml" group="spark-sample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spark-sample/spark-sample_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spark-sample/spark-sample_test.iml" group="spark-sample" />
+      <module fileurl="file://$PROJECT_DIR$/spring/spring.iml" filepath="$PROJECT_DIR$/spring/spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tasks/tasks.iml" filepath="$PROJECT_DIR$/.idea/modules/tasks/tasks.iml" group="tasks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tasks/tasks_main.iml" filepath="$PROJECT_DIR$/.idea/modules/tasks/tasks_main.iml" group="tasks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tasks/tasks_test.iml" filepath="$PROJECT_DIR$/.idea/modules/tasks/tasks_test.iml" group="tasks" />
     </modules>
   </component>
 </project>

@@ -9,7 +9,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/akka-sample" />
             <option value="$PROJECT_DIR$/concurrency" />
+            <option value="$PROJECT_DIR$/frontend" />
+            <option value="$PROJECT_DIR$/rx-java" />
+            <option value="$PROJECT_DIR$/spark-sample" />
+            <option value="$PROJECT_DIR$/tasks" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

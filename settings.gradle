@@ -3,4 +3,7 @@ include 'concurrency'
 include 'frontend'
 include 'akka-sample'
 include 'tasks'
+include 'spark-sample'
+include 'rx-java'
+include 'rx-java'
 
