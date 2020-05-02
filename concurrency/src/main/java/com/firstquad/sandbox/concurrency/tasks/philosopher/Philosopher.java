@@ -1,4 +1,4 @@
-package com.firstquad.sandbox.tasks.philosopher;
+package com.firstquad.sandbox.concurrency.tasks.philosopher;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;

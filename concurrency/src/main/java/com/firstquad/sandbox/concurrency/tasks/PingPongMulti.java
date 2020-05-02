@@ -1,4 +1,4 @@
-package com.firstquad.sandbox.tasks;
+package com.firstquad.sandbox.concurrency.tasks;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
