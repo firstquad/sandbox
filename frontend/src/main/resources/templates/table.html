@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="refresh" content="5;table"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/replicat.js"></script>
+</head>
+<body onload="myFunction()">
+<div id="time">
+    <table id="thetable" class="table">
+        <tr>
+            <th>replicat</th>
+            <th>schema</th>
+            <th>table</th>
+            <th>source</th>
+            <th>lag</th>
+            <th>isWarning</th>
+        </tr>
+        <tr id="row" th:each="replicat : ${replicates}">
+            <td th:text="${replicat.name}"></td>
+            <td th:text="${replicat.schema}"></td>
+            <td th:text="${replicat.table}"></td>
+            <td th:text="${replicat.sourceTime}"></td>
+            <td th:text="${replicat.lag}"></td>
+            <td th:text="${replicat.isWarning}"></td>
+        </tr>
+    </table>
+    <p th:text="'Last updated time: ' + ${dateVal}"></p>
+</div>
+</body>
+</html>
