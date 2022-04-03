@@ -4,8 +4,7 @@ package com.firstquad.sandbox.concurrency.tasks.ticktock;
  * Created by dmitriy on 15.04.17.
  */
 public class Clock {
-
-    String state = "";
+    private volatile String state = "";
 
     synchronized void doAction(boolean isRunning, String action) {
         if (!isRunning) {
@@ -21,8 +20,7 @@ public class Clock {
         notifyAll();
 
         try {
-            long l = System.currentTimeMillis();
-            while (state.equals(action) /*&& System.currentTimeMillis() - l < 500*/) {
+            while (state.equals(action)) {
                 wait();
             }
         } catch (Exception e) {
