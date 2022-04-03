@@ -22,12 +22,12 @@ public class MyThread implements Runnable {
             for (int i = 0; i < 5; i++) {
                 clock.doAction(true, tick);
             }
-            clock.doAction(false, tock);
+            clock.doAction(false, tick);
         } else {
             for (int i = 0; i < 5; i++) {
                 clock.doAction(true, tock);
             }
-            clock.doAction(false, tick);
+            clock.doAction(false, tock);
         }
     }
 }

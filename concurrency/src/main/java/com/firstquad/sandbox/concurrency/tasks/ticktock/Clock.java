@@ -21,8 +21,7 @@ public class Clock {
         notifyAll();
 
         try {
-            long l = System.currentTimeMillis();
-            while (state.equals(action) /*&& System.currentTimeMillis() - l < 500*/) {
+            while (state.equals(action)) {
                 wait();
             }
         } catch (Exception e) {
